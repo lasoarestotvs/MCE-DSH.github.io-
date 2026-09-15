@@ -721,6 +721,14 @@
         </main>
     </div>
 
+    <!-- ASSISTENTE AI (GLOBAL) -->
+    <button onclick="poqToggleChat()" class="fixed bottom-6 right-6 w-16 h-16 bg-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center hover:bg-blue-700 transition-all z-50 group"><i data-lucide="truck" class="w-8 h-8 group-hover:scale-110 transition-transform"></i><span class="absolute -top-2 -right-1 bg-red-500 text-[10px] font-bold px-2 py-0.5 rounded-full animate-bounce">AI</span></button>
+    <div id="poq-ai-chat" class="chat-container fixed bottom-24 right-6 w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 z-50 flex flex-col overflow-hidden max-h-[600px]">
+        <div class="p-4 bg-slate-900 text-white flex justify-between items-center"><div class="flex items-center gap-3"><div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center shadow-inner"><i data-lucide="sparkles" class="w-6 h-6"></i></div><div><h4 class="font-bold text-sm">LogiAssistant</h4><span class="text-[10px] text-blue-300">Inteligência Logística</span></div></div><button onclick="poqToggleChat()" class="hover:bg-slate-800 p-1.5 rounded-full transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button></div>
+        <div id="poq-chat-messages" class="flex-1 p-4 space-y-4 overflow-y-auto custom-scroll bg-slate-50 min-h-[350px]"><div class="flex gap-2"><div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center shrink-0"><i data-lucide="bot" class="w-4 h-4 text-blue-600"></i></div><div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm text-gray-700 border border-gray-100 max-w-[85%]">Olá! Sou o LogiAssistant. A nova Matriz de Risco confirma que Lapa (01) e Norte (12) são as lojas mais críticas em volume e impacto de tempo. Posso ajudar com mais detalhes?</div></div></div>
+        <div class="p-4 border-t bg-white"><div class="relative"><input id="poq-chat-input" type="text" placeholder="Pergunte ao assistente..." class="w-full pl-4 pr-12 py-3 bg-gray-100 border-none rounded-xl text-sm focus:ring-2 focus:ring-blue-500 outline-none" onkeypress="if(event.key==='Enter') poqSendMessage()"><button onclick="poqSendMessage()" class="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"><i data-lucide="send" class="w-5 h-5"></i></button></div></div>
+    </div>
+
     <script>
         // Inicialização Global
         window.onload = () => { 
