@@ -73,42 +73,42 @@
 </head>
 <body class="flex h-screen overflow-hidden bg-slate-50 text-slate-900">
 
-    <aside class="w-72 bg-[#0B1120] text-white flex flex-col shadow-2xl z-20 flex-shrink-0">
-        <div class="p-6 pb-8 border-b border-white/5">
+    <aside class="w-72 bg-white text-slate-800 flex flex-col shadow-[4px_0_24px_rgba(0,0,0,0.02)] border-r border-slate-200 z-20 flex-shrink-0">
+        <div class="p-6 pb-8 border-b border-slate-100">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-xl shadow-lg">M</div>
+                <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-md shadow-blue-600/20">M</div>
                 <div>
-                    <h1 class="font-extrabold text-lg leading-tight tracking-tight">Dashboards</h1>
-                    <p class="text-xs text-blue-400 font-medium">Meu Controle de Entregas</p>
+                    <h1 class="font-extrabold text-lg leading-tight tracking-tight text-slate-900">Dashboards</h1>
+                    <p class="text-xs text-blue-600 font-bold">Meu Controle de Entregas</p>
                 </div>
             </div>
         </div>
 
         <nav class="flex-1 py-6 px-4 space-y-1.5 overflow-y-auto custom-scroll" id="main-nav">
-            <button onclick="switchAppView('visao-geral')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 bg-blue-600 text-white shadow-lg shadow-blue-900/50" data-target="visao-geral">
+            <button onclick="switchAppView('visao-geral')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 bg-blue-600 text-white shadow-md shadow-blue-600/20" data-target="visao-geral">
                 <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
                 <span class="truncate">Visão Operacional</span>
             </button>
-            <button onclick="switchAppView('status-entregas')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-400 hover:bg-white/5 hover:text-slate-200" data-target="status-entregas">
+            <button onclick="switchAppView('status-entregas')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-500 hover:bg-slate-50 hover:text-slate-900" data-target="status-entregas">
                 <i data-lucide="truck" class="w-5 h-5"></i>
                 <span class="truncate">Linha do Tempo</span>
             </button>
-            <button onclick="switchAppView('desempenho-frota')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-400 hover:bg-white/5 hover:text-slate-200" data-target="desempenho-frota">
+            <button onclick="switchAppView('desempenho-frota')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-500 hover:bg-slate-50 hover:text-slate-900" data-target="desempenho-frota">
                 <i data-lucide="alert-triangle" class="w-5 h-5"></i>
                 <span class="truncate">Ocorrências e Qualidade</span>
             </button>
-            <button onclick="switchAppView('produtividade')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-400 hover:bg-white/5 hover:text-slate-200" data-target="produtividade">
+            <button onclick="switchAppView('produtividade')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-500 hover:bg-slate-50 hover:text-slate-900" data-target="produtividade">
                 <i data-lucide="activity" class="w-5 h-5"></i>
                 <span class="truncate">Monitoramento Online</span>
             </button>
         </nav>
         
-        <div class="p-4 border-t border-white/5">
-            <div class="flex items-center gap-3 px-2 py-3 bg-white/5 rounded-xl">
-                <div class="w-9 h-9 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold border border-slate-600">PO</div>
+        <div class="p-4 border-t border-slate-100">
+            <div class="flex items-center gap-3 px-2 py-3 bg-slate-50 hover:bg-slate-100 transition-colors cursor-pointer rounded-xl border border-slate-100">
+                <div class="w-9 h-9 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold border border-blue-200">PO</div>
                 <div class="text-left overflow-hidden">
-                    <p class="text-xs font-bold text-white truncate">Product Owner</p>
-                    <p class="text-[10px] text-slate-400 truncate">Administrador MCE</p>
+                    <p class="text-xs font-bold text-slate-800 truncate">Product Owner</p>
+                    <p class="text-[10px] text-slate-500 font-medium truncate">Administrador MCE</p>
                 </div>
             </div>
         </div>
@@ -653,9 +653,15 @@
                                 <div class="flex flex-col items-center w-24"><div class="v-bar bg-orange-50 shadow-sm" style="height: 15px;"><span class="v-label-value">3</span></div><span class="mt-4 text-[11px] font-bold text-slate-600 text-center">Marcos Oliveira</span></div>
                             </div>
                             <div class="mt-12 p-5 bg-blue-50 rounded-xl flex items-center gap-4 border border-blue-100">
-                                <i data-lucide="brain-circuit" class="w-8 h-8 text-blue-600"></i>
-                                <div class="text-sm text-blue-900"><strong>Análise Preditiva LogiAssistant:</strong> Foi detetado um padrão de erros concentrado no Turno B (Operadores Ricardo e Ana). Sugerimos auditoria em tempo real na doca 4 para validar se a falha é operacional ou devido ao estado dos paletes vazios.</div>
-                            </div>
+                        <i data-lucide="brain-circuit" class="w-8 h-8 text-blue-600"></i>
+                        <div class="text-sm text-blue-900"><strong>Análise Preditiva LogiAssistant:</strong> Foi detetado um padrão de erros concentrado no Turno B (Operadores Ricardo e Ana). Sugerimos auditoria em tempo real na doca 4 para validar se a falha é operacional ou devido ao estado dos paletes vazios.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="poq-modal-details" class="fixed inset-0 z-[150] hidden items-center justify-center p-4 modal-overlay"><div class="bg-white rounded-2xl shadow-2xl max-w-5xl w-full overflow-hidden border border-gray-200 flex flex-col"><div class="p-6 pb-4 flex justify-between items-center border-b border-gray-100"><h3 id="poq-modal-title" class="text-xl font-bold text-gray-800">Detalhes do Indicador</h3><button onclick="poqCloseModal()" class="text-gray-500 hover:text-gray-800 transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button></div><div class="p-6"><div id="poq-modal-content" class="max-h-[60vh] overflow-y-auto custom-scroll"></div><div class="mt-6 flex justify-end"><button onclick="poqCloseModal()" class="px-8 py-2.5 bg-gray-100 text-gray-800 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Fechar</button></div></div></div></div>
+    </div>
                         </div>
                     </div>
                 </div>
@@ -742,16 +748,16 @@
         function switchAppView(viewId) {
             document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-900/50');
-                btn.classList.add('text-slate-400');
+                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-900/50', 'shadow-md', 'shadow-blue-600/20');
+                btn.classList.add('text-slate-500');
                 const icon = btn.querySelector('i, svg');
                 if (icon) icon.classList.remove('text-white');
             });
             
             document.getElementById('view-' + viewId).classList.add('active');
             const activeBtn = document.querySelector(`[data-target="${viewId}"]`);
-            activeBtn.classList.remove('text-slate-400');
-            activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-900/50');
+            activeBtn.classList.remove('text-slate-500', 'text-slate-400');
+            activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-600/20');
             
             const activeIcon = activeBtn.querySelector('i, svg');
             if (activeIcon) activeIcon.classList.add('text-white');
