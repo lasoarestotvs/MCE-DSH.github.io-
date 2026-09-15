@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCE Dashboards - Meu Controle de Entregas</title>
+    <title>WMS Dashboards - Meu Controle de Entregas</title>
     
     <!-- Tailwind CSS & Lucide Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -78,7 +78,7 @@
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-xl shadow-lg">M</div>
                 <div>
-                    <h1 class="font-extrabold text-lg leading-tight tracking-tight">MCE Dashboards</h1>
+                    <h1 class="font-extrabold text-lg leading-tight tracking-tight">WMS Dashboards</h1>
                     <p class="text-xs text-blue-400 font-medium">Controle de Entregas</p>
                 </div>
             </div>
@@ -87,15 +87,15 @@
         <nav class="flex-1 py-6 px-4 space-y-1.5 overflow-y-auto custom-scroll" id="main-nav">
             <button onclick="switchAppView('visao-geral')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 bg-blue-600 text-white shadow-lg shadow-blue-900/50" data-target="visao-geral">
                 <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
-                <span class="truncate">Operacional de Entrega</span>
+                <span class="truncate">Visão Geral (Operacional)</span>
             </button>
             <button onclick="switchAppView('status-entregas')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-400 hover:bg-white/5 hover:text-slate-200" data-target="status-entregas">
                 <i data-lucide="truck" class="w-5 h-5"></i>
-                <span class="truncate">Linha do Tempo</span>
+                <span class="truncate">Status de Entregas (Linha do Tempo)</span>
             </button>
             <button onclick="switchAppView('desempenho-frota')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-400 hover:bg-white/5 hover:text-slate-200" data-target="desempenho-frota">
                 <i data-lucide="alert-triangle" class="w-5 h-5"></i>
-                <span class="truncate">Ocorrências de Qualidade</span>
+                <span class="truncate">Desempenho da Frota (Ocorrências)</span>
             </button>
             <button onclick="switchAppView('produtividade')" class="nav-btn w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 text-slate-400 hover:bg-white/5 hover:text-slate-200" data-target="produtividade">
                 <i data-lucide="activity" class="w-5 h-5"></i>
@@ -116,7 +116,7 @@
 
     <div class="flex-1 flex flex-col overflow-hidden relative">
         <header class="h-20 bg-white border-b border-slate-200 flex items-center justify-between px-8 flex-shrink-0 z-10">
-            <h2 id="topbar-title" class="text-xl font-black text-slate-800 uppercase tracking-tight">Operacional de Entrega</h2>
+            <h2 id="topbar-title" class="text-xl font-black text-slate-800 uppercase tracking-tight">Visão Geral (Operacional)</h2>
             <div class="flex items-center gap-6">
                 <div class="relative hidden md:block">
                     <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4"></i>
